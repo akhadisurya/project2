@@ -8,7 +8,24 @@
 </head>
 <body>
 
+<br><h1>Fantasy Dating</h1>
+<p>
+  <% if current_user %>
+    Welcome, <%= current_user.first_name %>
+      |
+    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+
+  <% else %>
+    <%= link_to 'Login', login_path %>
+      |
+    <%= link_to 'Sign Up', new_user_path %>
+  <% end %>
+</p>
 <%= yield %>
+
+
+
+
 
 </body>
 </html>

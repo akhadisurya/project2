@@ -1,0 +1,12 @@
+<h1>Today's Matches</h1>
+
+<ul>
+    <% @matches.each do |match| %>
+        <li>
+            <strong> <%= match.first_name %> </strong>
+            <%= link_to "Check Me Out <3", match_path(match) %>
+        </li>
+    <% end %>
+</ul>
+
+
