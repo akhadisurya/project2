@@ -1,6 +1,8 @@
 <h1> <%= @user.first_name %> </h1>
 
-<p>Test<%= @user.first_name %> </p>
+<p>Hi my name is <%= @user.first_name %> <%= @user.last_name %></p>
+<p>I am a <%= @user.gender %></p>
+<p>I am <%= @user.age %> years old</p>
 
 <%= link_to "Edit this user!", edit_user_path(@user) %>
 

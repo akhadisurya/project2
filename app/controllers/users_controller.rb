@@ -27,10 +27,17 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
         if @user.update_attributes(params.require(:user).permit(:first_name, :last_name, :email, :gender, :age, :password_digest, :picture_file_name))
-              redirect_to users_path
+              redirect_to user_path
         else
                render :edit
        end
+  end
+
+
+  def destroy
+      @user = User.find(params[:id])
+      @user.destroy
+      redirect_to root_path
   end
 
 

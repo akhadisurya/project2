@@ -13,8 +13,9 @@
   <% if current_user %>
     Welcome, <%= current_user.first_name %>
       |
-    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
     <%= link_to 'Profile', user_path(current_user) %>
+    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+
   <% else %>
     <%= link_to 'Login', login_path %>
       |

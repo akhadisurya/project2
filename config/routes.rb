@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   get 'users/create'
 
   get "users/:id/edit" => "users#edit", as: :edit_user
-  patch "beans/:id" => "users#update"
-  resources :users, only: [:new, :create, :show, :update]
+  patch "users/:id" => "users#update"
+  resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 
+  delete "users/:id" => "users#destroy"
 
   resources :matches
   root "welcome#home"
