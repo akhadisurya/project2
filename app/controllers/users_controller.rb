@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def create
@@ -17,6 +17,22 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+
+  def edit
+    @user = User.find(params[:id])
+    end
+
+    def update
+    @user = User.find(params[:id])
+
+        if @user.update_attributes(params.require(:user).permit(:first_name, :last_name, :email, :gender, :age, :password_digest, :picture_file_name))
+              redirect_to users_path
+        else
+               render :edit
+       end
+  end
+
 
    private
         def user_params

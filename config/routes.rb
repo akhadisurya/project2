@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
-
-  resources :users, only: [:new, :create]
+  get "users/:id/edit" => "users#edit", as: :edit_user
+  patch "beans/:id" => "users#update"
+  resources :users, only: [:new, :create, :show, :update]
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 
