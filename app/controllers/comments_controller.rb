@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:index, :show]
-  before_action :only_my_comments, only: [:edit, :update]
+  before_action :only_my_comments, only: [:edit, :update, :destroy]
 
     def index
     @comments = Comment.all
@@ -48,6 +48,7 @@ class CommentsController < ApplicationController
       @comment = Comment.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:content, :user_id, :match_id)
@@ -56,6 +57,5 @@ class CommentsController < ApplicationController
     def only_my_comments
       redirect_to match_path(@comment.match), notice: "you can't edit someone elses tweets" if (current_user != @comment.user)
     end
-
 
 end

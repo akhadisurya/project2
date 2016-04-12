@@ -9,7 +9,7 @@
 <ul>
 <% @match.comments.each do |comment| %>
   <li><%= comment.content %><br>
-  From User: <%= comment.user.first_name %><br>
+  From User: <%= comment.user.first_name %> <%= comment.user.last_name %><br>
   For Match ID: <%= comment.match_id %><br>
   <%= link_to "Edit", "/comments/#{comment.id}/edit" %>
   <%= link_to "Delete!", comment, method: :delete, data: { confirm: "Are you sure you want to delete this comment?"} %>
