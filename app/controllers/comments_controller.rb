@@ -21,18 +21,22 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find(params[:id])
-    @comment.destroy
   end
 
   def update
-    @comment = Comment.find(params[:id])
-    @comment.destroy
+     @comment = Comment.find(params[:id])
+
+        if @comment.update_attributes(params.require(:comment).permit(:content, :user_id, :match_id))
+              redirect_to match_path(@comment.match)
+        else
+               render :edit
+       end
   end
 
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to current_user
+    redirect_to match_path(@comment.match)
   end
 
 end
