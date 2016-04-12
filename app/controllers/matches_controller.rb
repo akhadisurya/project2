@@ -8,7 +8,7 @@ class MatchesController < ApplicationController
 
     def show
     @match = Match.find(params[:id])
-    @comment = Comment.new
+    @comment = @match.comments.build(:user_id => current_user.id)
 
     end
 

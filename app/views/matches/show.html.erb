@@ -4,7 +4,20 @@
 <p>I am a <%= @match.gender %></p>
 <p>I am <%= @match.age %> years old</p>
 
+
+<p>Existing Comments</p>
+<ul>
+<% @match.comments.each do |comment| %>
+  <li><%= comment.content %>
+  </li>
+<% end %>
+</ul>
+
+
 <%= form_for @comment do |f| %>
+
+    <%= f.hidden_field :match_id %>
+    <%= f.hidden_field :user_id %>
 
     <div>
         <%= f.label :content %>
@@ -16,4 +29,4 @@
 <% end %>
 
 
-<%= link_to "Back to the list!", matches_path %>
+<%= link_to "Back to Today's Matches!", matches_path %>
