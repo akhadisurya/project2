@@ -8,6 +8,12 @@ class MatchesController < ApplicationController
 
     def show
     @match = Match.find(params[:id])
+    @comment = Comment.new
+
+    end
+
+    def new
+    @comment = Comment.new
     end
 
 end

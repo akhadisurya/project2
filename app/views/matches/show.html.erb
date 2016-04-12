@@ -1,8 +1,19 @@
 <h1> <%= @match.first_name %> </h1>
 
-<p>Hi my name is <%= @match.first_name %> <%= @match.last_name %></p>
+<p>Hi, my name is <%= @match.first_name %> <%= @match.last_name %></p>
 <p>I am a <%= @match.gender %></p>
 <p>I am <%= @match.age %> years old</p>
+
+<%= form_for @comment do |f| %>
+
+    <div>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </div>
+
+    <%= f.submit "Holla at me!" %>
+
+<% end %>
 
 
 <%= link_to "Back to the list!", matches_path %>
