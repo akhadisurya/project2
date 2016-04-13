@@ -1,7 +1,7 @@
 <h1> <%= @user.first_name %> </h1>
 
-<% if @user.picture_file_name_file_name.present? %>
-<%= image_tag @user.picture_file_name_file_name.url(:medium) %>
+<% if @user.picture_file_name.present? %>
+<%= image_tag @user.picture_file_name.url(:medium) %>
 <% end %>
 
 <p>Hi my name is <%= @user.first_name %> <%= @user.last_name %></p>

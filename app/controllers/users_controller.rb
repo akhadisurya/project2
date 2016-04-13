@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      #this syntax helps the sign up page
       session[:user_id] = @user.id
       flash[:notice] = "You have successfully signed up!"
       redirect_to user_path(@user)
@@ -44,6 +45,6 @@ class UsersController < ApplicationController
 
    private
         def user_params
-            params.require(:user).permit(:email, :password, :password_confirmation, :first_name)
+            params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :picture_file_name)
         end
 end
