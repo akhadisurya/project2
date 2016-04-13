@@ -1,4 +1,4 @@
-<h1>Today's Matches</h1>
+<h1>Today's Matches: Please fulfill my fantasy <%= emojify(":smiling_imp:") %></h1>
 
 
 <ul>
@@ -10,7 +10,8 @@
   </div>
 
             <img src="<%= match.image %>" width=200px height=200px>
-            <%= link_to "Check Me Out <3", match_path(match) %>
+            <%= link_to emojify("Check Me Out :heart:"), match_path(match) %>
+
         </li>
     <% end %>
 </ul>
