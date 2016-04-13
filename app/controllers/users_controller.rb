@@ -11,8 +11,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "You have successfully signed up!"
-      redirect_to user_path(current_user)
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
     def update
     @user = User.find(params[:id])
 
-        if @user.update_attributes(params.require(:user).permit(:first_name, :last_name, :email, :gender, :age, :password_digest, :picture_file_name))
+        if @user.update_attributes(params.require(:user).permit(:first_name, :last_name, :email, :gender, :age, :password_digest))
               redirect_to user_path
         else
                render :edit
