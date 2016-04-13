@@ -1,9 +1,15 @@
 <h1>Today's Matches</h1>
 
+
 <ul>
     <% @matches.each do |match| %>
         <li>
             <strong> <%= match.first_name %> </strong>
+            <div class="field">
+
+  </div>
+
+            <img src="<%= match.image %>" width=200px height=200px>
             <%= link_to "Check Me Out <3", match_path(match) %>
         </li>
     <% end %>
