@@ -11,6 +11,7 @@
 
 <p>Hi my name is <%= @user.first_name %> <%= @user.last_name %></p>
 <p>I am a <%= @user.gender %></p>
+<p>I am interested in <%= @user.preference %></p>
 <p>I am <%= @user.age %> years old</p>
 
 <%= link_to "Edit", edit_user_path(@user) %>
