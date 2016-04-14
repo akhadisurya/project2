@@ -1,15 +1,26 @@
+<div class="webcontainer">
+
+<div class="userprofile">
 <h1> <%= @user.first_name %> </h1>
+
 
 <% if @user.picture_file_name.present? %>
 <%= image_tag @user.picture_file_name.url(:medium) %>
 <% end %>
 
+
 <p>Hi my name is <%= @user.first_name %> <%= @user.last_name %></p>
 <p>I am a <%= @user.gender %></p>
 <p>I am <%= @user.age %> years old</p>
 
-<%= link_to "Edit this user!", edit_user_path(@user) %>
+<%= link_to "Edit", edit_user_path(@user) %>
 
-<%= link_to "Delete Account!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this Account?"} %>
+|
+
+<%= link_to "Delete Account", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this Account?"} %>
+
+|
 
 <%= link_to "Today's Matches", matches_path %>
+</div>
+</div>

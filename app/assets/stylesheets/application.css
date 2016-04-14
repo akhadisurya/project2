@@ -71,7 +71,6 @@
     width: 100%;
     text-align: center;
     font-size: 18px;
-    border: 3px solid black;
     width: 500px;
     height: 570px;
     background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcShyiE_xCQfAbl9AcA_gphjubsXRN6gDFlmNybuKg-6a3-tQaDb");
@@ -79,13 +78,31 @@
     background-size: 100% 100%;
 }
 
-.picture_file_name {
+.login {
     position: absolute;
-    left: 100px;
-    top: 50%;
+    left: 500px;
+    top: 30%;
     width: 100%;
     text-align: center;
     font-size: 18px;
+    width: 290px;
+    height: 350px;
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRpvjWxSpMnciUm1nA6qXVAq12NhOLnHJK7qsj2rHDbyTtFSqmX");
+}
+
+.userprofile {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px
+}
+
+.webcontainer {
+   width:100%;
+    min-width:1000px;
+    height:auto;
 
 }
 

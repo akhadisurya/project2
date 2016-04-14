@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<div class = "webcontainer">
 <body class= '<%= controller.controller_path %> <%= controller.action_name %>'>
 
 <!-- below is the basic css downloaded from bootwatch>
@@ -46,6 +47,7 @@
 <!-- Today's Matches page and syntaxes>
  -->
 <h1 class ="h1fantasy">Fantasy Dating <%= emojify(":fire:") %></h1>
+
 <p>
   <% if current_user %>
 
@@ -59,16 +61,11 @@
       |
     <%= link_to 'Sign Up', new_user_path %>
   <% end %>
+
 </p>
 
 <%= yield %>
 
-
-
-
-
-
-
-
 </body>
 </html>
+</div>
