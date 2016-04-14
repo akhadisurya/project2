@@ -4,12 +4,17 @@ class MatchesController < ApplicationController
 
     def index
     @matches = Match.all
+
+    if current_user.preference == "Women" || current_user.preference == "women"
+      @matches = @matches.select { |match| match.gender == "Female"}
+    else
+      @matches = @matches.select { |match| match.gender == "Male"}
+    end
+
     end
 
     def show
     @match = Match.find(params[:id])
-
-
     end
 
     def new
