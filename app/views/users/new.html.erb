@@ -1,3 +1,5 @@
+
+<div class="signup_container">
 <h1>Sign Up</h1>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -11,44 +13,45 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :first_name %>
+    <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %>
+    <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :gender %>
+    <%= f.label :gender %><br>
     <%= f.text_field :gender %>
   </div>
 
 
   <div class="field">
-    <%= f.label :age %>
+    <%= f.label :age %><br>
     <%= f.text_field :age %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password %><br>
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %><br>
   </div>
 
-  <div>
+  <div class="field">
   <%= f.file_field :picture_file_name %>
   </div>
 
   <div class="actions"><%= f.submit %></div>
 <% end %>
+</div>
