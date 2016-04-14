@@ -1,27 +1,29 @@
 <div class="webcontainer">
 
-<h1>Edit this User!</h1>
+<div class="edituser">
+<h1>Edit</h1>
 
 <%= form_for @user do |f| %>
 
     <div class="field">
-    <%= f.label :first_name %>
+    <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
     </div>
 
   <div class="field">
-    <%= f.label :last_name %>
+    <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= f.label :age %>
+    <%= f.label :age %><br>
     <%= f.text_field :age %>
   </div>
-
+  <br>
     <%= f.submit "Submit these changes!" %>
 
 <% end %>
-
+<br>
 <%= link_to "Back to Today's Matches!", matches_path %>
+</div>
 </div>

@@ -1,16 +1,20 @@
 <div class="webcontainer">
-<h1>Edit this Comment!</h1>
+
+<div class="editcomment">
+<h1>Edit</h1>
 
 <%= form_for @comment do |f| %>
 
     <div class="field">
-    <%= f.label :content %>
+    <%= f.label :content %><br>
     <%= f.text_field :content %>
     </div>
 
+    <br>
     <%= f.submit "Submit these changes!" %>
 
 <% end %>
-
+<br>
 <%= link_to "Back to Today's Matches!", matches_path %>
+</div>
 </div>
