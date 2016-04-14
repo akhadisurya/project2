@@ -6,8 +6,8 @@
 <p>I am <%= @match.age %> years old</p>
 
 
-<p>Existing Comments</p>
-<ul>
+<p class = "existing_comment">Existing Comments: </p><br>
+<ul class = "comment_class">
 <% @match.comments.each do |comment| %>
   <li><%= comment.content %><br>
   From User: <%= comment.user.first_name %> <%= comment.user.last_name %><br>

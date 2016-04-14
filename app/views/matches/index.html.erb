@@ -1,7 +1,7 @@
-<h1>Today's Matches: Please fulfill my fantasy <%= emojify(":smiling_imp:") %></h1>
+<h1 class="h1today">Today's Matches: I Want You So Bad <%= emojify(":smiling_imp:") %></h1>
 
 
-<ul>
+<ul class="scroll_match">
     <% @matches.each do |match| %>
         <li>
             <strong> <%= match.first_name %> </strong>
@@ -9,7 +9,7 @@
 
   </div>
 
-            <img src="<%= match.image %>" width=200px height=200px>
+            <img src="<%= match.image %>" width=100px height=100px>
             <%= link_to emojify("Check Me Out :heart:"), match_path(match) %>
 
         </li>
