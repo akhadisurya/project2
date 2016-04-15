@@ -8,6 +8,7 @@ gem 'rails', '4.2.5.2'
 # emoji
 gem 'gemoji'
 
+gem 'aws-sdk'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
