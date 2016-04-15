@@ -35,8 +35,8 @@
 }
 
 .scroll_match {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     overflow: scroll;
     margin: auto;
     width: 60%;
@@ -45,23 +45,16 @@
 
 .h1fantasy {
   color: #ff4411;
-  font-size: 48px;
+  font-size: 55px;
   font-family: 'Signika', sans-serif;
   padding-bottom: 10px;
 }
 
 .h1today{
-  display: inline;
-  position: relative;
-  font: 70px Helvetica, Sans-Serif;
-  letter-spacing: -8px;
-  color: rgba(0,0,255,0.5);
-}
-
-.h1today:after {
-  content: "Today's Matches: I Want You So Bad";
-  position: absolute; left: 5px; top: 3px;
-  color: rgba(255,0,0,0.5);
+  color: #ff4411;
+  font-size: 30px;
+  font-family: 'Signika', sans-serif;
+  padding-bottom: 10px;
 }
 
 .signup_container {

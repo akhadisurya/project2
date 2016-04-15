@@ -7,8 +7,11 @@ class MatchesController < ApplicationController
 
     if current_user.preference == "Women" || current_user.preference == "women"
       @matches = @matches.select { |match| match.gender == "Female"}
-    else
+    elsif
+      current_user.preference == "Men" || current_user.preference == "men"
       @matches = @matches.select { |match| match.gender == "Male"}
+    else
+      @matches = Match.all
     end
 
     end
