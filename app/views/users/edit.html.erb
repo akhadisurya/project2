@@ -20,10 +20,13 @@
     <%= f.text_field :gender %>
     </div>
 
+    <!-- just for documentation
+    drop down menu with embedded ruby-->
     <div class="field">
     <%= f.label :preference %><br>
-    <%= f.text_field :preference %>
+    <%= f.select :preference, %w{Women Men}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
     </div>
+
 
     <div class="field">
     <%= f.label :age %><br>
