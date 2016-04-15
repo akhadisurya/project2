@@ -31,12 +31,12 @@
 
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, %w{Male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :preference %><br>
-    <%= f.text_field :preference %>
+    <%= f.select :preference, %w{Women Men Both}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
   </div>
 
   <div class="field">
